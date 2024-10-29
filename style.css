@@ -1,0 +1,117 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+}
+:root{
+    --primary-color:#399f6e;
+    --text-coolr:#0d2f3f;
+    --pg-color:#665f73;
+    --yellow:#ffc62d;
+    --white-stoke:#fff;
+    --black-stoke:#000;
+    
+
+}
+/*navigation bar*/
+
+nav{  
+ width: 100%;
+ display: flex;
+ justify-content:space-between;
+ align-items: center;
+ position: fixed;
+ top: 0%;
+ left: 0%;
+ padding: 0px 12%;
+ z-index: 999;
+ transition: .6s;
+ background-color:var(--white-stoke) ;
+}
+.logo{
+    width: 150px;
+
+}
+.logo a{
+    
+    color: var(--yellow);
+    font-weight: 600;
+    font-size: 2rem;
+}
+.logo a span{
+    width: 100%;
+    color: var(--primary-color);
+    font-weight: 400;
+    
+}
+.menu{
+    display: inline-flex;
+    gap: 30px;
+    justify-content: space-between;
+    color: var(--black-stoke);
+    align-items: center;
+}
+.menu li a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .6s;
+    color: var(--black-stoke);
+
+}
+.menu li a:hover{
+    color: var(--primary-color);
+}
+.menu li:nth-child(1) a{
+    color: var(--primary-color);
+}
+.menu div{
+    width: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ri-search-line{
+    font-size: 1.2rem;
+}
+#toggle{
+    display: none;
+}
+@media screen and (max-width:1000px){
+    #toggle{
+     display: block;
+     color: var(--white-stoke);
+     font-size: 1.5rem;
+     background-color: var(--yellow);
+     padding: 10px;
+     border-radius: 20%;
+    }
+    .menu{
+        height: 0;
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 5%;
+        width: 90%;  
+        border: 1px solid #1c1919;
+        background-color: var(--white-stoke);
+        backdrop-filter: blur(10px);
+        padding-top: 50px;
+        justify-content: center;
+        opacity: 0;
+        overflow: hidden;
+        transition: .2s;
+        z-index: 999;
+
+    }
+    .show_menu{
+        opacity: 1;
+        height: 320px;
+    }
+}
